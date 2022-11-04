@@ -20,6 +20,7 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    jobList: [{type: Schema.Types.ObjectId, ref: 'Job'}],
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`

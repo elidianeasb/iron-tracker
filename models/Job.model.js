@@ -2,7 +2,7 @@ const { Schema, model } = require("mongoose");
 
 const jobSchema = new Schema(
   {
-    jobTitle: {
+    title: {
       type: String,
       require: true,       
     },
@@ -10,8 +10,8 @@ const jobSchema = new Schema(
       type: String,  
       require: true,  
     },
-    jobDescription: String,      
-    data: Date,
+    description: String,      
+    date: Date,
     location: String,
     workplace: [String],
     status: [String],
@@ -26,7 +26,7 @@ const jobSchema = new Schema(
   }
 );
 
-const User = model("Job", jobSchema);
+const Job = model("Job", jobSchema);
 
 module.exports = Job;
 

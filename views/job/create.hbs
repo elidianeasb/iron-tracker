@@ -1,0 +1,48 @@
+<h1>Create Job</h1>
+
+<form action="/create" method="post">
+
+    <label for="title">Job Title</label>
+    <input type="text" name="title" id="title">
+
+    <label for="company">Company</label>
+    <input type="text" name="company" id="company">
+
+    <label for="description">Description</label>
+    <textarea name="description" id="description" cols="20" rows="10" placeholder="Type the job description here.."></textarea>
+
+    <label for="date">Date of Application</label>
+    <input type="date" name="date" id="date">
+
+    <label for="location">Location</label>
+    <input type="text" name="location" id="location">
+
+    <label for="workplace">Workplace</label>
+    <select name="workplace" id="workplace">
+        <option value="on-site">On-site</option>
+        <option value="hybrid">Hybrid</option>
+        <option value="remote">Remote</option>
+    </select>
+
+    <label for="status">Status</label>
+    <select name="status" id="status">
+        <option value="phase1">Phase 1</option>
+        <option value="phase2">Phase 2</option>
+        <option value="phase3">Phase 3</option>
+    </select>
+
+    <label for="website">Job Platform</label>
+    <input type="text" name="website" id="website" placeholder="ex: LinkedIn, Indeed, Net-Empregos...">
+
+    <label for="webUrl">Job Link</label>
+    <input type="text" name="webUrl" id="webUrl" placeholder="Paste link of the job">
+
+    <label for="contact">Contact</label>
+    <input type="text" name="contact" id="contact">
+
+    <label for="notes">Notes</label>
+    <textarea name="notes" id="notes" cols="20" rows="10" placeholder="Type your notes here.."></textarea>
+
+    <button type="submit">Create 💼 !!!</button>
+
+</form>
