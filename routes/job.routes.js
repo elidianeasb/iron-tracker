@@ -36,4 +36,24 @@ router.post("/create", async (req, res, next) => {
     }
 });
 
+
+router.get('/details/:id', async (req, res, next) => {
+    try {
+        const { id } = req.params;  
+        console.log(id)
+
+        const job = await Job.findById(id);
+        console.log(job)
+
+        res.render('job/details', job);
+        
+    } catch (error) {
+        console.log(error);
+        next(error);        
+    }
+})
+
+
+
+
 module.exports = router;
