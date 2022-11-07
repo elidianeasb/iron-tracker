@@ -56,7 +56,7 @@ h1 {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: stretch;
   align-content: stretch;
 }
@@ -69,6 +69,7 @@ h1 {
 
 .joblistContent {
   text-align: center;
+  flex-wrap: wrap;
 }
 
 
