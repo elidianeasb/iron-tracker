@@ -2,7 +2,7 @@
 
 <hr>
 
-{{#each jobs}}
+{{!-- {{#each jobs}}
 
 <div>
     <article class="jobBar">
@@ -21,10 +21,37 @@
         <div class="detailsDiv">
             <a class="btn btn-outline-info btn-lg active" href="#">+</a>
         </div>
+        <div class="detailsDiv">
+            <a class="btn btn-secondary btn-lg active" href="#">!</a>
+        </div>
     </article>
     <hr>
 </div>
 
+{{/each}} --}}
+
+{{#each jobs}}
+
+  <div class="row align-items-start">
+    <div class="col">
+        <p class="joblistHeader">Title</p>
+        <p class="joblistContent">{{title}}</p>
+    </div>
+    <div class="col">
+        <p class="joblistHeader">Company</p>
+        <p class="joblistContent">{{company}}</p>
+    </div>
+    <div class="col">
+        <p class="joblistHeader">Status</p>
+        <p class="joblistContent">{{status}}</p>
+    </div>
+    <div class="col">
+        <a class="btn btn-primary btn-sm active" href="#"><span>🔍︎</span></a>
+        <a class="btn btn-danger btn-sm active" href="#"><span>🗙</span></a>
+{{!--         <a class="btn btn-secondary btn-sm active" href="#"><span>🗙</span></a> --}}
+    </div>
+  </div>
+<hr>
 {{/each}}
 
-<a href="/create">Create new Listing</a>
+<p class="text-center"><a class="btn btn-success btn-sm active" href="/create">Create new Listing</a></p>
