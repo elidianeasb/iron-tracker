@@ -6,10 +6,19 @@ const User = require('../models/User.model')
 /* GET Create Job page */
 
 
-router.get("/create", (req, res, next) => res.render("job/create"));
+router.get("/create", (req, res, next) => {
+
+    //Validation Redirection for no Session
+    if (!req.session.currentUser) {
+        return res.render("auth/login");
+    }
+
+    res.render("job/create");
+});
 
 router.post("/create", async (req, res, next) => {
     try {
+
         const username = req.session.currentUser.username;
         console.log(req.session.currentUser);
         

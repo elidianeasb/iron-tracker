@@ -5,10 +5,16 @@ const Job = require('../models/Job.model');
 
 /* GET User Dashboard */
 router.get("/joblist", async (req, res, next) => {
-    console.log(req.session.currentUser._id);
+
     try {
-        //const {id} = req.params;
+
+        //Validation Redirection for no Session
+        if (!req.session.currentUser) {
+            return res.render("auth/login");
+        }
+
         const id = req.session.currentUser._id;
+
         //const jobs = await Job.findById(id).populate('jobList');
         //TODO
         const jobs = await User.findById(id).populate('jobList');
