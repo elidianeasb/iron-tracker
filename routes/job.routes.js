@@ -53,6 +53,18 @@ router.get('/details/:id', async (req, res, next) => {
     }
 })
 
+router.post('/delete/:id', async(req, res, next) => {
+    try {
+        const { id } = req.params;
+        await Job.findByIdAndRemove(id);
+        res.redirect(`/joblist`);
+        
+    } catch (error) {        
+        consolelog(error);
+        next(error);        
+    }
+})
+
 
 
 
