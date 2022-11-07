@@ -7,21 +7,24 @@
 <div>
     <article class="jobBar">
         <div>
-            <p class="joblistHeader">Job Title</p>
-            <p>{{title}}</p>
+            <p class="joblistHeader joblistContent">Job Title</p>
+            <p class="joblistContent">{{title}}</p>
         </div>
         <div>
-            <p class="joblistHeader">Company</p>
-            <p>{{company}}</p>
+            <p class="joblistHeader joblistContent">Company</p>
+            <p class="joblistContent">{{company}}</p>
         </div>
         <div>
-            <p class="joblistHeader">Status</p>
-            <p>{{status}}</p>
+            <p class="joblistHeader joblistContent">Status</p>
+            <p class="joblistContent">{{status}}</p>
         </div>
-        <button disabled="disabled">Details</button>
+        <div class="detailsDiv">
+            <a class="btn btn-outline-info btn-lg active" href="#">+</a>
+        </div>
     </article>
     <hr>
 </div>
 
-
 {{/each}}
+
+<a href="/create">Create new Listing</a>
