@@ -1,7 +1,27 @@
-<p>Hello</p>
+<h2 class="text-center">Application Tracker 💼</h2>
+
+<hr>
 
 {{#each jobs}}
 
-<h1>{{title}}</h1>
+<div>
+    <article class="jobBar">
+        <div>
+            <p class="joblistHeader">Job Title</p>
+            <p>{{title}}</p>
+        </div>
+        <div>
+            <p class="joblistHeader">Company</p>
+            <p>{{company}}</p>
+        </div>
+        <div>
+            <p class="joblistHeader">Status</p>
+            <p>{{status}}</p>
+        </div>
+        <button disabled="disabled">Details</button>
+    </article>
+    <hr>
+</div>
+
 
 {{/each}}
