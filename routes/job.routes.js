@@ -3,6 +3,7 @@ const Job = require('../models/Job.model');
 const router = express.Router();
 const User = require('../models/User.model')
 
+
 /* GET Create Job page */
 
 
@@ -37,6 +38,9 @@ router.post("/create", async (req, res, next) => {
 });
 
 
+/* DETAILS Route */
+
+
 router.get('/details/:id', async (req, res, next) => {
     try {
         const { id } = req.params;  
@@ -50,8 +54,42 @@ router.get('/details/:id', async (req, res, next) => {
     } catch (error) {
         console.log(error);
         next(error);        
-    }
-})
+    };
+});
+
+
+/* EDIT Route */
+
+
+router.get("/edit/:id", async (req, res, next) => {
+    try {
+        const { id } = req.params;
+        const job = await Job.findById(id);
+
+        res.render('job/edit', job);
+
+    } catch (error) {
+        console.log(error);
+        next(error);
+    };
+});
+
+router.post("/edit/:id", async (req, res, next) => {
+    try {
+        const { id } = req.params;
+        const {title, company, description, date, location, workplace, status, website, webUrl, contact, notes} = req.body;
+
+        const updatedJob = await Job.findByIdAndUpdate(id, {title, company, description, date, location, workplace, status, website, webUrl, contact, notes});
+
+        res.redirect(`/details/${updatedJob._id}`);
+
+    } catch (error) {
+        console.log(error);
+        next(error);
+    };
+});
+
+/* DELETE Route */
 
 router.post('/delete/:id', async(req, res, next) => {
     try {
@@ -64,8 +102,6 @@ router.post('/delete/:id', async(req, res, next) => {
         next(error);        
     }
 })
-
-
 
 
 module.exports = router;
