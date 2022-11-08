@@ -10,6 +10,10 @@ Palette 3:
 https://coolors.co/d64045-e9fff9-9ed8db-467599-1d3354
 */
 
+body {
+  margin: 10px;
+}
+
 #paletteOne {
   color: #ffffff;
   color: #00A7E1;
