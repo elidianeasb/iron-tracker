@@ -2,33 +2,16 @@
 
 <hr>
 
-{{!-- {{#each jobs}}
+<nav class="navbar bg-light">
+  <div class="container-fluid">
+    <form class="d-flex" role="search" action="">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
 
-<div>
-    <article class="jobBar">
-        <div>
-            <p class="joblistHeader joblistContent">Job Title</p>
-            <p class="joblistContent">{{title}}</p>
-        </div>
-        <div>
-            <p class="joblistHeader joblistContent">Company</p>
-            <p class="joblistContent">{{company}}</p>
-        </div>
-        <div>
-            <p class="joblistHeader joblistContent">Status</p>
-            <p class="joblistContent">{{status}}</p>
-        </div>
-        <div class="detailsDiv">
-            <a class="btn btn-outline-info btn-lg active" href="#">+</a>
-        </div>
-        <div class="detailsDiv">
-            <a class="btn btn-secondary btn-lg active" href="#">!</a>
-        </div>
-    </article>
-    <hr>
-</div>
-
-{{/each}} --}}
+<hr>
 
 {{#each jobs}}
 
