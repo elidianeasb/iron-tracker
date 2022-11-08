@@ -41,7 +41,8 @@ body {
 
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 12px Arial, Helvetica, sans-serif;
+  
   padding: 0px;
 /*   background-color: #9AD1D4; */
 /*   background-color: #80CED7; */
@@ -53,8 +54,13 @@ a {
 }
 
 h1 {
-  color: 15px;
+  color: #80CED7;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 50px;
 }
+
+
 
 .jobBar {
   display: flex;
@@ -78,5 +84,89 @@ h1 {
   text-align: center;
   flex-wrap: wrap;
 }
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.form-control{
+  padding: 10px;
+  width: 70%;
+  height: 50%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.01);  
+  border: none;
+  border-radius: 0%;
+  border-bottom: 1px solid #80CED7;
+
+}
+
+
+.form-control:focus{
+  box-shadow:none;  
+  border-bottom: 2.5px solid #80CED7;
+} 
+
+.form-control::placeholder{
+  color:gray;
+}
+
+.form-control:focus::placeholder {
+  font-size: 10px;
+  color:#80CED7;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+input[type="date"] { 
+  color: gray;
+}
+
+select option[value=""] {
+  color: gray;
+}
+
+.form-login{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-login-info{ 
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgb(176, 174, 174);
+  border-radius: 50px;  
+}
+
+.form-login-info:focus{ 
+  box-shadow: none;
+}
+
+
+.btn-outline-primary{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #80CED7;
+  border-radius: 50px;  
+  color: #80CED7;
+  justify-content: center;
+}
+
+.btn-outline-primary:hover{
+  background-color:#80CED7;
+  border: 1px solid #80CED7;
+}
+
+
+
+
+
+
+
 
 

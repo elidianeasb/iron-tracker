@@ -1,65 +1,62 @@
 <h1>New Job Application</h1>
 
 
+
+
 <form action="/create" method="post">
 
     <div class="form-group">
-        <label for="title">Job Title <span style="color: red;">*</span></label>
-        <input type="text" name="title" class="form-control" id="title" placeholder="title">
+        <label for="title"></label>
+        <input type="text" name="title" class="form-control" id="title" placeholder="Job Title">
     </div>
 
     <div class="form-group">
-        <label for="company">Company <span style="color: red;">*</span></label>
-        <input type="text" name="company" class="form-control" id="company" placeholder="company name">
+        <label for="company"></label>
+        <input type="text" name="company" class="form-control" id="company" placeholder="Company">
     </div>
 
     <div class="form-group">
-        <label for="date">Application Date</label>
-        <input type="date" name="date" class="form-control" id="date">
+        <label for="date"></label>
+        <input type="date" name="date" class="form-control" id="date" >
     </div>
 
     <div class="form-group">
-        <label for="location">Location</label>
-        <input type="text" name="location" class="form-control" id="location">
+        <label for="location"></label>
+        <input type="text" name="location" class="form-control" id="location" placeholder="Location">
     </div>
 
     <div class="form-group">
-        <label for="workplace">Workplace</label>
+        <label for="workplace"></label>
         <select class="form-control" name="workplace" id="workplace">
+            <option value="">Select the workplace</option>
             <option value="On-site">On-site</option>
             <option value="Hybrid">Hybrid</option>
             <option value="Remote">Remote</option>
         </select>
     </div>
 
-
-
     <div class="form-group">
-        <label for="website">Posting</label>
-        <input type="text" name="website" class="form-control" id="website">
+        <label for="webUrl"></label>
+        <input type="text" name="webUrl" class="form-control" id="webUrl" placeholder="Link to job advert">
     </div>
 
     <div class="form-group">
-        <label for="webUrl">Link </label>
-        <input type="text" name="webUrl" class="form-control" id="webUrl" placeholder="link to  job advert">
+        <label for="description"></label>
+        <textarea class="form-control" name="description" id="description" cols="1" rows="1"
+            placeholder="Job Description"></textarea>
     </div>
 
     <div class="form-group">
-        <label for="description">Description</label>
-        <textarea class="form-control" name="description" id="description" cols="20" rows="10"
-            placeholder="Type here the job description"></textarea>
-    </div>
-
-    <div class="form-group">
-        <label for="contact">Contact</label>
-        <input type="text" name="contact" class="form-control" id="contact">
+        <label for="contact"></label>
+        <input type="text" name="contact" class="form-control" id="contact" placeholder="Contact info">
     </div>
 
 
 
     <div class="form-group">
-        <label for="status">Status</label>
+        <label for="status"></label>
         <select class="form-control" name="status" id="status">
+            <option value="" class="disabled-selected" disabled selected>select the status</option>
             <option value="Applied">Applied</option>
             <option value="Phase 2">Phase 2</option>
             <option value="Phase 3">Phase 3</option>
@@ -67,9 +64,9 @@
     </div>
 
     <div class="form-group">
-        <label for="notes">Notes</label>
-        <textarea class="form-control" name="notes" id="notes" cols="20" rows="10"
-            placeholder="Type your notes here.."></textarea>
+        <label for="notes"></label>
+        <textarea class="form-control" name="notes" id="notes" cols="1" rows="1"
+            placeholder="Type your notes here..."></textarea>
     </div>
 
     <button type="submit" class="btn btn-outline-primary">Create</button>
