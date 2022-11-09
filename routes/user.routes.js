@@ -55,9 +55,9 @@ router.get("/joblist", async (req, res, next) => {
                 const stringId = primeId.toString();
                 const finalId = stringId.replace(`new ObjectId("`, "");
 
-                const job = await Job.findById(finalId);
+                const singleResult = await Job.findById(finalId);
 
-                res.render('job/details', job);
+                res.render('job/details', singleResult);
             };
 
             res.render("user/main", {jobs: filterSet});
