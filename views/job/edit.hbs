@@ -14,7 +14,7 @@
 
     <div class="form-group">
         <label for="date"></label>
-        <input type="date" name="date" class="form-control" id="date" >
+        <input type="date" name="date" class="form-control" id="date" placeholder="{{date}}" value='{{date}}'>
     </div>
 
     <div class="form-group">
@@ -25,6 +25,7 @@
     <div class="form-group">
         <label for="workplace"></label>
         <select class="form-control" name="workplace" id="workplace">
+            <option value="{{workplace}}" class="disabled-selected" disabled selected>{{workplace}}</option>
             <option value="">Select the workplace</option>
             <option value="On-site">On-site</option>
             <option value="Hybrid">Hybrid</option>
@@ -58,7 +59,8 @@
     <div class="form-group">
         <label for="status"></label>
         <select class="form-control" name="status" id="status">
-            <option value="" class="disabled-selected" disabled selected>select the status</option>
+            <option value="{{status}}" class="disabled-selected" disabled selected>{{status}}</option>
+            <option value="" class="disabled-selected" disabled selected>Select the Status</option>
             <option value="Applied">Applied</option>
             <option value="Phase 2">Phase 2</option>
             <option value="Phase 3">Phase 3</option>
@@ -72,6 +74,6 @@
     </div>
 
     <button type="submit" class="btn btn-outline-primary">Edit</button>
-    <a class="btn btn-danger btn-sm active" href="/joblist">Cancel</a>
+    <a class="btn btn-danger btn-sm active" href="/details/{{_id}}">Cancel</a>
 
 </form>
