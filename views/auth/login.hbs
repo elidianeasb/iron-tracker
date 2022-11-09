@@ -1,22 +1,18 @@
-<h1>Log In</h1>
+<h2>Log In</h2>
 
 
-<form action="/auth/login" method="POST">
+<form action="/auth/login" method="POST" class="form-wrapper">
 
-  <div class="form-login">
-    <label for="email">
-      <input type="email" class="form-login-info" name="email" placeholder="Email" />
-    </label>
-  </div>
+    <input type="email" class="form-login" name="email" placeholder="Email" />
 
-  <div class="form-login">
-    <label>
-      <input type="password" class="form-login-info" name="password" placeholder="Password" /></label>
-  </div>
+    <input type="password" class="form-login" name="password" placeholder="Password" />
 
-  <button type="submit" class="btn btn-outline-primary">Log In</button>
+  <button type="submit" class="btn-login">Login</button>
 
   {{#if errorMessage}}
   <p class="error">{{errorMessage}}</p>
   {{/if}}
+  <div class="login-footer">
+    <span>Don't have an account?</span><a href="/auth/signup">Create new one</a>
+  </div>
 </form>
