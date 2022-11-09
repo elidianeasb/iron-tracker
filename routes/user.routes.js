@@ -16,7 +16,7 @@ router.get("/joblist", async (req, res, next) => {
         const id = req.session.currentUser._id;
         const jobs = await User.findById(id).populate('jobList');
 
-        //! jobs is atually user
+        //! jobs is actually user
         const jobsArray = jobs.jobList; //each element here is an OBJECT
 
         //! -> Dynamic Variant of 'If Filter is Inserted'
@@ -24,12 +24,28 @@ router.get("/joblist", async (req, res, next) => {
 
             let filterValue = req.query.filter;
 
-            const filterArrCompany = jobsArray.filter(element => element.company == filterValue);
-            const filterArrTitle = jobsArray.filter(element => element.title == filterValue);
-            const filterArrStatus = jobsArray.filter(element => element.status[0] == filterValue);
+            //Filter by Primary Values
+            const filtCompany = jobsArray.filter(element => element.company.includes(`${filterValue}`));
+            const filtTitle = jobsArray.filter(element => element.title.includes(`${filterValue}`));
+            const filtStatus = jobsArray.filter(element => element.status[0].includes(`${filterValue}`));
 
-            const filterArr = filterArrCompany.concat(filterArrTitle, filterArrStatus);
+            //Filter by Secondary Values, in addition
 
+            const filtLocation = jobsArray.filter(element => element.location.includes(`${filterValue}`));
+            const filtWorkplace = jobsArray.filter(element => element.workplace[0].includes(`${filterValue}`));
+            const filtWebsite = jobsArray.filter(element => element.website.includes(`${filterValue}`));
+            const filtContact = jobsArray.filter(element => element.contact.includes(`${filterValue}`));
+
+            //Filter by Tertiary Values, in addition
+
+            const filtDescrip = jobsArray.filter(element => element.description.includes(`${filterValue}`));
+            const filtNotes = jobsArray.filter(element => element.notes.includes(`${filterValue}`));
+
+            const filterArr = filtCompany.concat(
+                filtTitle, filtStatus, filtLocation, filtWorkplace, 
+                filtWebsite, filtContact, filtDescrip, filtNotes
+            );
+            
             const filterSet = new Set(filterArr);
 
             res.render("user/main", {jobs: filterSet});
