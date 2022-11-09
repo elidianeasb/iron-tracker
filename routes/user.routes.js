@@ -40,10 +40,13 @@ router.get("/joblist", async (req, res, next) => {
 
             const filtDescrip = jobsArray.filter(element => element.description.includes(`${filterValue}`));
             const filtNotes = jobsArray.filter(element => element.notes.includes(`${filterValue}`));
+            const filtDate = jobsArray.filter(element => element.date.toString().includes(`${filterValue}`));
+            
+            //Group all results in Array, then push to Set
 
             const filterArr = filtCompany.concat(
                 filtTitle, filtStatus, filtLocation, filtWorkplace, 
-                filtWebsite, filtContact, filtDescrip, filtNotes
+                filtWebsite, filtContact, filtDescrip, filtNotes, filtDate
             );
             
             const filterSet = new Set(filterArr);
