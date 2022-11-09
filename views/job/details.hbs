@@ -1,23 +1,48 @@
 
 <h2>{{this.title}} @ {{this.company}}</h2>
-<h5>{{this.location}}</h5>
-<h5>{{this.status}}</h5>
+{{#if location}}
+<h5>located in {{this.location}}</h5>
+{{/if}}
+{{#if status}}
+<h5>Current Phase: {{this.status}}</h5>
+{{/if}}
 <hr>
 <ul>
+    {{#if date}}
     <li>applied on {{this.date}}</li>
+    {{/if}}
+    {{#if workplace}}
     <li>{{this.workplace}} routine</li>
-    <li>Found on <a href="{{this.webUrl}}">{{this.website}}</a></li>
-    <li>Contact Person: {{this.contact}}</li>
+    {{/if}}
+    {{#unless webUrl}}
+    <li>Found on {{this.website}}</li>
+    {{/unless}}
+    {{#if webUrl}}
+    <li>Found on <a href="{{this.webUrl}}" target="_blank">{{this.website}}</a></li>
+    {{/if}}
+    {{#if contact}}
+    <li>Contact Person: <a href="https://www.google.com/search?q={{this.contact}}" target="_blank">{{this.contact}}</a></li>
+    {{/if}}
 </ul>
 <hr>
 <h4>Job Description</h4>
 <article>
+    {{#unless description}}
+    <p>No description provided yet!</p>
+    {{/unless}}
+    {{#if description}}
     <p>{{this.description}}</p>
+    {{/if}}
 </article>
 <hr>
 <h4>Your Notes</h4>
 <article>
+    {{#unless notes}}
+    <p>You have no notes in this listing!</p>
+    {{/unless}}
+    {{#if notes}}
     <p>{{this.notes}}</p>
+    {{/if}}
 </article>
 
 <a class="btn btn-primary btn-sm active" href="/edit/{{_id}}">✎</a>
