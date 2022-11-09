@@ -48,6 +48,18 @@ router.get("/joblist", async (req, res, next) => {
             
             const filterSet = new Set(filterArr);
 
+            //! Render Details if only 1 Result
+            if(filterSet.size === 1) {
+
+                const primeId = filterArr[0]._id;
+                const stringId = primeId.toString();
+                const finalId = stringId.replace(`new ObjectId("`, "");
+
+                const job = await Job.findById(finalId);
+
+                res.render('job/details', job);
+            };
+
             res.render("user/main", {jobs: filterSet});
 
         };
