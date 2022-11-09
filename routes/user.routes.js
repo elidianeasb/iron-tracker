@@ -27,12 +27,12 @@ router.get("/joblist", async (req, res, next) => {
             //Filter by Primary Values
             const filtCompany = jobsArray.filter(element => element.company.includes(`${filterValue}`));
             const filtTitle = jobsArray.filter(element => element.title.includes(`${filterValue}`));
-            const filtStatus = jobsArray.filter(element => element.status[0].includes(`${filterValue}`));
+            const filtStatus = jobsArray.filter(element => element.status.includes(`${filterValue}`));
 
             //Filter by Secondary Values, in addition
 
             const filtLocation = jobsArray.filter(element => element.location.includes(`${filterValue}`));
-            const filtWorkplace = jobsArray.filter(element => element.workplace[0].includes(`${filterValue}`));
+            const filtWorkplace = jobsArray.filter(element => element.workplace.includes(`${filterValue}`));
             const filtWebsite = jobsArray.filter(element => element.website.includes(`${filterValue}`));
             const filtContact = jobsArray.filter(element => element.contact.includes(`${filterValue}`));
 
