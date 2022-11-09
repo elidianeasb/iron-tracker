@@ -55,10 +55,8 @@ router.get("/joblist", async (req, res, next) => {
             if(filterSet.size === 1) {
 
                 const primeId = filterArr[0]._id;
-                const stringId = primeId.toString();
-                const finalId = stringId.replace(`new ObjectId("`, "");
-
-                const singleResult = await Job.findById(finalId);
+                
+                const singleResult = await Job.findById(primeId);
 
                 res.render('job/details', singleResult);
             };
