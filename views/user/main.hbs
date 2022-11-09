@@ -1,6 +1,21 @@
-<h2 class="text-center">Application Tracker 💼</h2>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/"><h1>JOB TRACKER</h1></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="/joblist">Job List</a>
+      <a class="nav-item nav-link active" href="/auth/logout"><span class="text-danger">Logout</span></a>
+    </div>
+  </div>
+</nav>
+
+<h2 class="text-center">Application Tracker</h2>
 
 <hr>
+
 
 {{!-- <p>Option 1</p> --}}
 <div>
@@ -12,7 +27,58 @@
 
 <hr>
 
-{{#each jobs}}
+<div class="container">
+    <div class="row">
+        {{#each jobs}}
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <div class="col">
+                    <p class="joblistHeader">Title</p>
+                    <p class="joblistContent">{{title}}</p>
+                </div>
+                <div class="col">
+                    <p class="joblistHeader">Company</p>
+                    <p class="joblistContent">{{company}}</p>
+                </div>
+                <div class="col">
+                    <p class="joblistHeader">Status</p>
+                    <p class="joblistContent">{{status}}</p>
+                </div>
+                <div class="col">
+                    <div class="card-bottom">
+                    <a href="/details/{{_id}}"><span>More</span></a>
+                    <form action="/delete/{{_id}}" method="post">
+                        <button class="btn-delete" type="submit">🗑</button>
+                    </form>                    
+                </div>
+
+
+                </div>
+                
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div> 
+        <p class="text-center"><a class="btn btn-success btn-sm active" href="/create">Create new Listing</a></p>
+
+
+        
+
+            
+            
+
+
+
+
+
+
+
+
+
+
+
+{{!-- {{#each jobs}}
 
 <div class="row align-items-start">
     <div class="col">
@@ -35,6 +101,6 @@
     </div>
 </div>
 <hr>
-{{/each}}
+{{/each}} --}}
 
-<p class="text-center"><a class="btn btn-success btn-sm active" href="/create">Create new Listing</a></p>
+{{!-- <p class="text-center"><a class="btn btn-success btn-sm active" href="/create">Create new Listing</a></p> --}}

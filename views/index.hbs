@@ -1,23 +1,18 @@
 <h1>JOB TRACKER</h1>
+<hr>
 <p>Free job tracker to confidently manage your job search</p>
-<hr>
 
-<img src="/images/bg.jpg" class="img-fluid rounded" alt="searching on laptop">
-<hr>
 
-<div class="row align-items-center">
-    <div class="col">
-      <a class="btn btn btn-primary btn-lg active" href="/auth/login">Log In</a>
-    </div>
-    <div class="col">
-      <a class="btn btn btn-success btn-lg active" href="/joblist">Joblist</a>
-    </div>
-    <div class="col">
-      <a class="btn btn btn-primary btn-lg active" href="/auth/signup">Sign Up</a>
-    </div>
+<div class="header-container">
+
+  <a href="/joblist">Tracker your jobs applications</a>
+  <a class="btn-home" href="/auth/login">Log In</a>
+  <a class="btn-home" href="/auth/signup">Sign Up</a>
+
 </div>
 
 <hr>
+<img src="/images/bg.jpg" class="img-fluid rounded" alt="searching on laptop">
 
 {{#if user}}
 <p>Hello {{user.username}}</p>

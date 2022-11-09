@@ -1,11 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/"><h1>JOB TRACKER</h1></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav>
+
 <h2>Log In</h2>
 
 
 <form action="/auth/login" method="POST" class="form-wrapper">
 
-    <input type="email" class="form-login" name="email" placeholder="Email" />
+    <input type="email" class="form-login" name="email" placeholder="✉ Email" />
 
-    <input type="password" class="form-login" name="password" placeholder="Password" />
+    <input type="password" class="form-login" name="password" placeholder="🔒 Password" />
 
   <button type="submit" class="btn-login">Login</button>
 
@@ -13,6 +21,6 @@
   <p class="error">{{errorMessage}}</p>
   {{/if}}
   <div class="login-footer">
-    <span>Don't have an account?</span><a href="/auth/signup">Create new one</a>
+    <span style="font-size: 14px;">Don't have an account?</span><a href="/auth/signup">Create new one</a>
   </div>
 </form>
