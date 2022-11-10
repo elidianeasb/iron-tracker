@@ -1,0 +1,68 @@
+
+#homeImage {
+    filter: blur(0px);
+    width: 100%;
+}
+
+#homeDiv {
+    overflow: hidden;
+}
+
+.homeContainer {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.homeCentered {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+}
+
+.homeSubCentered {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+}
+
+.homeButton {
+    position: absolute;
+    top: 52.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+}
+
+.homeSubButton {
+    position: absolute;
+    top: 62.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+}
+
+
+.homeInhalt {
+    color: whitesmoke;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* <filter-function> = 
+  <blur()>         |
+  <brightness()>   |
+  <contrast()>     |
+  <drop-shadow()>  |
+  <grayscale()>    |
+  <hue-rotate()>   |
+  <invert()>       |
+  <opacity()>      |
+  <sepia()>        |
+  <saturate()>    */
