@@ -1,4 +1,4 @@
-<h1>Edit Job Application</h1>
+<h3>Edit Job Application</h3>
 
 <form action="/edit/{{_id}}" method="post">
 
@@ -68,7 +68,7 @@
 
     <div class="form-group">
         <label for="contact"></label>
-        <input type="text" name="contact" class="form-control" id="contact" placeholder="Contact info" value="{{contact}}">
+        <input type="text" name="contact" class="form-control" id="contact" placeholder="Contact person" value="{{contact}}">
     </div>
 
     <div class="form-group">
@@ -77,7 +77,7 @@
             placeholder="Type your notes here...">{{notes}}</textarea>
     </div>
 
-    <button type="submit" class="btn btn-outline-primary">Edit</button>
-    <a class="btn btn-danger btn-sm active" href="/details/{{_id}}">Cancel</a>
+    <button type="submit" class="btn-main" style="width:150px;">Edit</button>
+    <a class="btn-cancel" href="/details/{{_id}}" style="width:150px;">Cancel</a>
 
 </form>

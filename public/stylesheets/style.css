@@ -62,6 +62,13 @@ h2 {
   margin-bottom: 15px;
 }
 
+h3 {
+  color: #80CED7;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 70px;
+}
+
 .index-nav {
   display: flex;
   flex-direction: row;
@@ -308,6 +315,22 @@ select option[value=""] {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+
+.details{
+  margin-left: 15px;
+}
+
+.details a{
+  text-decoration: none;
+}
+
+.back-btn{
+  margin-top: 100px;
+  width:40px; 
+  height:40px; 
+  font-size: 25px;
 }
 
 
