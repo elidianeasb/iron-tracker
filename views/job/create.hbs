@@ -1,0 +1,101 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/"><h1>JOB TRACKER</h1></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="/joblist">Job List</a>
+      <a class="nav-item nav-link active" href="/auth/logout"><span class="text-danger">Logout</a>
+    </div>
+  </div>
+</nav>
+
+<h1>New Job Application</h1>
+
+
+
+
+<form action="/create" method="post">
+
+    <div class="form-group">
+        <label for="title"></label>
+        <input type="text" name="title" class="form-control" id="title" placeholder="Job Title">
+    </div>
+
+    <div class="form-group">
+        <label for="company"></label>
+        <input type="text" name="company" class="form-control" id="company" placeholder="Company">
+    </div>
+
+    <div class="form-group">
+        <label for="date"></label>
+        <input type="date" name="date" class="form-control" id="date" >
+    </div>
+
+    <div class="form-group">
+        <label for="location"></label>
+        <input type="text" name="location" class="form-control" id="location" placeholder="Location">
+    </div>
+
+    <div class="form-group">
+        <label for="workplace"></label>
+        <select class="form-control" name="workplace" id="workplace">
+            <option value="">Select the workplace</option>
+            <option value="On-site">On-site</option>
+            <option value="Hybrid">Hybrid</option>
+            <option value="Remote">Remote</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="website"></label>
+        <input type="text" name="website" class="form-control" id="website" placeholder="Social Platform">
+    </div>
+
+    <div class="form-group">
+        <label for="webUrl"></label>
+        <input type="text" name="webUrl" class="form-control" id="webUrl" placeholder="Link to job advert">
+    </div>
+
+    <div class="form-group">
+        <label for="description"></label>
+        <textarea class="form-control" name="description" id="description" cols="1" rows="1"
+            placeholder="Job Description"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="contact"></label>
+        <input type="text" name="contact" class="form-control" id="contact" placeholder="Contact info">
+    </div>
+
+
+
+    <div class="form-group">
+        <label for="status"></label>
+        <select class="form-control" name="status" id="status">
+            <option value="" class="disabled-selected" disabled selected>select the status</option>
+            <option value="Applied">Applied</option>
+            <option value="Phase 2">Phase 2</option>
+            <option value="Phase 3">Phase 3</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="notes"></label>
+        <textarea class="form-control" name="notes" id="notes" cols="1" rows="1"
+            placeholder="Type your notes here..."></textarea>
+    </div>
+
+    <div class="create-footer">
+        <button type="submit" class="btn-main" style="width:150px;">Create</button>
+    <a class="btn-cancel" style="width:150px;" href="/joblist">Cancel</a>
+
+    </div>
+    
+
+</form>
+
+
+<form action="/create" method="post">

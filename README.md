@@ -1,4 +1,4 @@
-# Project Name
+# Placeholder Project Name
 
 <br>
 
@@ -6,7 +6,7 @@
 
 ## Description
 
-Search platform for restaurants in Barcelona and creating the favorite list of restaurants.
+Bookkeeping platform for job hunting.
 
 
 
@@ -44,7 +44,7 @@ Search platform for restaurants in Barcelona and creating the favorite list of r
 | `POST`     | `/signup`                          | Sends Sign Up info to the server and creates user in the DB. | {  email, password  }                                    |
 | `GET`      | `/private/edit-profile`            | Private route. Renders `edit-profile` form view.             |                                                          |
 | `PUT`      | `/private/edit-profile`            | Private route. Sends edit-profile info to server and updates user in DB. | { email, password, [firstName], [lastName], [imageUrl] } |
-| `GET`      | `/private/favorites`               | Private route. Render the `favorites` view.                  |                                                          |
+| `GET`      | `/private/:id/joblist`               | Private route. Render the `jobList` of the specific User.                  |                                                          |
 | `POST`     | `/private/favorites/`              | Private route. Adds a new favorite for the current user.     | { name, cuisine, city, }                                 |
 | `DELETE`   | `/private/favorites/:restaurantId` | Private route. Deletes the existing favorite from the current user. |                                                          |
 | `GET`      | `/restaurants`                     | Renders `restaurant-list` view.                              |                                                          |
@@ -65,18 +65,31 @@ User model
   name: String,
   email: String,
   password: String,
-  favorites: [FavoriteId],
+  profilePicture: String, (URL)
+  jobList: [JobsId],
 }
 
 ```
 
 
 
-Favorites model
+Job model
 
 ```javascript
 {
-  placeId: String,
+  company: String,
+  jobTitle: String,
+  location: String,
+  workplace: [String], (On-site, Remote, Hybrid)
+  date: Date,
+  contactPerson: String,
+
+  status: [String],
+  website: String,
+  webUrl: String,
+
+  jobDescription: String,
+  userNotes: String,
 }
 
 ```
@@ -87,6 +100,13 @@ Favorites model
 
 ## API's
 
+Bonus:
+
+[LinkedIn API](https://developer.linkedin.com/)
+
+[Google API](https://console.cloud.google.com/)
+
+[Google Maps API](https://developers.google.com/maps)
 
 <br>
 
@@ -101,7 +121,7 @@ Favorites model
 
 ## Backlog
 
-[See the Trello board.](https://trello.com/b/Ni3giVKf/ironhackproject)
+[See the Trello board.](https://trello.com/b/ubt7GCdP/ironjobs-project)
 
 
 
@@ -117,9 +137,9 @@ Favorites model
 
 The url to your repository and to your deployed project
 
-[Repository Link]()
+[Repository Link](https://github.com/elidianeasb/Project_2/tree/main)
 
-[Deploy Link]()
+[Deploy Link](https://project2oct.herokuapp.com/)
 
 
 
@@ -131,9 +151,9 @@ The url to your repository and to your deployed project
 
 The url to your presentation slides
 
-[Slides Link](https://docs.google.com/presentation/d/1P5FIi0vHZBUcgUtmt1M4_lLCO5dwdJ4UOgtJa4ehGfk/edit?usp=sharing)
+[Slides Link](https://docs.google.com/presentation/d/1P5FIi0vHZBUcgUtmt1M4_lLCO5dwdJ4UOgtJa4ehGfk/edit?usp=sharing) (NOT FINAL)
 
 ### Contributors
-FirstName LastName - [`<github-username>`](https://github.com/person1-username) - [`<linkedin-profile-link>`](https://www.linkedin.com/in/person1-username)
+Elidiane Bezerra - [`elidianeasb`](https://github.com/elidianeasb) - [`<linkedin-profile-link>`](https://www.linkedin.com/in/elidiane-bezerra/)
 
-FirstName LastName - [`<github-username>`](https://github.com/person2-username) - [`<linkedin-profile-link>`](https://www.linkedin.com/in/person2-username)
+Rafael Coelho - [`RFCoelho-gh`](https://github.com/RFCoelho-gh) - [`<linkedin-profile-link>`](https://www.linkedin.com/in/rafael-fernandes-coelho/)

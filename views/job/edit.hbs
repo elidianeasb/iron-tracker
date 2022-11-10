@@ -1,0 +1,79 @@
+<h1>Edit Job Application</h1>
+
+<form action="/edit/{{_id}}" method="post">
+
+    <div class="form-group">
+        <label for="title"></label>
+        <input type="text" name="title" class="form-control" id="title" placeholder="Job Title" value="{{title}}">
+    </div>
+
+    <div class="form-group">
+        <label for="company"></label>
+        <input type="text" name="company" class="form-control" id="company" placeholder="Company" value="{{company}}">
+    </div>
+
+    <div class="form-group">
+        <label for="date"></label>
+        <input type="date" name="date" class="form-control" id="date" placeholder="{{date}}" value='{{date}}'>
+    </div>
+
+    <div class="form-group">
+        <label for="location"></label>
+        <input type="text" name="location" class="form-control" id="location" placeholder="Location" value="{{location}}">
+    </div>
+
+    <div class="form-group">
+        <label for="workplace"></label>
+        <select class="form-control" name="workplace" id="workplace">
+            <option value="{{workplace}}" class="disabled-selected" disabled selected>{{workplace}}</option>
+            <option value="">Select the workplace</option>
+            <option value="On-site">On-site</option>
+            <option value="Hybrid">Hybrid</option>
+            <option value="Remote">Remote</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="website"></label>
+        <input type="text" name="website" class="form-control" id="website" placeholder="Social Platform" value="{{website}}">
+    </div>
+
+    <div class="form-group">
+        <label for="webUrl"></label>
+        <input type="text" name="webUrl" class="form-control" id="webUrl" placeholder="Link to job advert" value="{{webUrl}}">
+    </div>
+
+    <div class="form-group">
+        <label for="description"></label>
+        <textarea class="form-control" name="description" id="description" cols="1" rows="1"
+            placeholder="Job Description">{{description}}</textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="contact"></label>
+        <input type="text" name="contact" class="form-control" id="contact" placeholder="Contact info" value="{{contact}}">
+    </div>
+
+
+
+    <div class="form-group">
+        <label for="status"></label>
+        <select class="form-control" name="status" id="status">
+            <option value="{{status}}" class="disabled-selected" disabled selected>{{status}}</option>
+            <option value="" class="disabled-selected" disabled selected>Select the Status</option>
+            <option value="Applied">Applied</option>
+            <option value="Phase 2">Phase 2</option>
+            <option value="Phase 3">Phase 3</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="notes"></label>
+        <textarea class="form-control" name="notes" id="notes" cols="1" rows="1"
+            placeholder="Type your notes here...">{{notes}}</textarea>
+    </div>
+
+    <button type="submit" class="btn btn-outline-primary">Edit</button>
+    <a class="btn btn-danger btn-sm active" href="/details/{{_id}}">Cancel</a>
+
+</form>
