@@ -1,47 +1,7 @@
-/* 
-Palette 1:
-https://coolors.co/ffffff-00a7e1-00171f-003459-007ea7
-
-Palette 2:
-https://coolors.co/ccdbdc-9ad1d4-80ced7-007ea7-003249
-
-Palette 3:
-https://coolors.co/d64045-e9fff9-9ed8db-467599-1d3354
-*/
-
-
-#paletteOne {
-  color: #ffffff;
-  color: #00A7E1;
-  color: #00171F;
-  color: #003459;
-  color: #007EA7;
-}
-
-#paletteTwo {
-  color: #CCDBDC;
-  color: #9AD1D4;
-  color: #80CED7;
-  color: #007EA7;
-  color: #003249;
-}
-
-#paletteThree {
-  color: #D64045;
-  color: #E9FFF9;
-  color: #9ED8DB;
-  color: #467599;
-  color: #1D3354;
-}
-
-
 body {
   font-family: 12px Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  /*   background-color: #9AD1D4;
-  /*   background-color: #80CED7; */
-  /*   background-color: #9ED8DB; */
 }
 
 a {
@@ -52,6 +12,7 @@ h1 {
   color: #80CED7;
   font-size: 20px;
   text-align: center;
+  margin-top: 10px;
 }
 
 h2 {

@@ -54,15 +54,3 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-/* <filter-function> = 
-  <blur()>         |
-  <brightness()>   |
-  <contrast()>     |
-  <drop-shadow()>  |
-  <grayscale()>    |
-  <hue-rotate()>   |
-  <invert()>       |
-  <opacity()>      |
-  <sepia()>        |
-  <saturate()>    */
