@@ -58,15 +58,13 @@ router.get("/joblist", async (req, res, next) => {
                 
                 const singleResult = await Job.findById(primeId);
 
-                res.render('job/details', singleResult);
+                return res.render('job/details', singleResult);
+            } else {
+                return res.render("user/main", {jobs: filterSet});
             };
-
-            res.render("user/main", {jobs: filterSet});
-
+        } else {
+            return res.render("user/main", {jobs: jobsArray});
         };
-
-        res.render("user/main", {jobs: jobsArray});
-
     } catch (error) {
         console.log(error);
         next(error);
