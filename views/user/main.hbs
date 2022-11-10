@@ -1,15 +1,19 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/"><h1>JOB TRACKER</h1></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="/joblist">Job List</a>
-      <a class="nav-item nav-link active" href="/auth/logout"><span class="text-danger">Logout</span></a>
+    <a class="navbar-brand" href="/">
+        <h1>JOB TRACKER</h1>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="/joblist">Job List</a>
+            <a class="nav-item nav-link active" href="/auth/logout"><span class="text-danger">Logout</span></a>
+        </div>
     </div>
-  </div>
 </nav>
 
 <h2 class="text-center">Application Tracker</h2>
@@ -18,55 +22,57 @@
 
 
 {{!-- <p>Option 1</p> --}}
-<div>
+<div class="search-bar">
     <form action="/joblist" class="input-group input-group-lg" method="GET">
-        <input type="text" class="" name="filter" placeholder="Title, Company, Status..">
-        <button type="submit" class="btn btn-outline-secondary">Find !</button>
+        <input type="text" class="form-login" style="width:250px;" name="filter" placeholder="Title, Company, Status..">
+        <button type="submit" class="btn-main" style="width:60px; height: 35px;">Search</button>
     </form>
 </div>
 
 <hr>
 
-<div class="container">
+
+<div class="container align-cards">
     <div class="row">
         {{#each jobs}}
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 22rem; background-color: rgb(253, 253, 253)">
             <div class="card-body">
-                <div class="col">
-                    <p class="joblistHeader">Title</p>
+                <div class="col ">
+                    <p class="joblistHeader">Title:</p>
                     <p class="joblistContent">{{title}}</p>
                 </div>
                 <div class="col">
-                    <p class="joblistHeader">Company</p>
+                    <p class="joblistHeader">Company:</p>
                     <p class="joblistContent">{{company}}</p>
                 </div>
                 <div class="col">
-                    <p class="joblistHeader">Status</p>
+                    <p class="joblistHeader">Status:</p>
                     <p class="joblistContent">{{status}}</p>
                 </div>
                 <div class="col">
                     <div class="card-bottom">
-                    <a href="/details/{{_id}}"><span>More</span></a>
-                    <form action="/delete/{{_id}}" method="post">
-                        <button class="btn-delete" type="submit">🗑</button>
-                    </form>                    
+                        <a href="/details/{{_id}}"><span>More</span></a>
+                        <form action="/delete/{{_id}}" method="post">
+                            <button class="btn-delete" type="submit"><span class="bi-trash"></span></button>
+                        </form>
+                    </div>
                 </div>
-
-
-                </div>
-                
             </div>
         </div>
         {{/each}}
     </div>
-</div> 
-        <p class="text-center"><a class="btn btn-success btn-sm active" href="/create">Create new Listing</a></p>
+</div>
+<p class="text-center"><a class="btn-main" style="width:150px;" href="/create">Create new Job</a></p>
 
 
-        
+               
 
-            
-            
+
+
+
+
+
+
 
 
 

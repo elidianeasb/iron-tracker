@@ -36,7 +36,6 @@ https://coolors.co/d64045-e9fff9-9ed8db-467599-1d3354
 
 
 body {
-  padding: 50px;
   font-family: 12px Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
@@ -53,7 +52,6 @@ h1 {
   color: #80CED7;
   font-size: 20px;
   text-align: center;
-  margin-top: 50px;
 }
 
 h2 {
@@ -64,8 +62,7 @@ h2 {
   margin-bottom: 15px;
 }
 
-
-.jobBar {
+.index-nav {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -75,7 +72,7 @@ h2 {
 }
 
 .joblistHeader {
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: #00171F;
   text-align: center;
@@ -83,7 +80,7 @@ h2 {
 }
 
 .joblistContent {
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   text-align: center;
   flex-wrap: wrap;
 }
@@ -189,10 +186,11 @@ select option[value=""] {
 }
 
 
-.btn-login {
+.btn-main {
   width: 100%;
   display: flex;
   justify-content: center;  
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
   border: 1px solid #80CED7;
@@ -200,16 +198,39 @@ select option[value=""] {
   border-radius: 6px;
   color: white;
   padding: 6px;
+  cursor: pointer;
 }
 
-.btn-login:focus {  
+.btn-main:focus {  
+  text-decoration: none;
   outline-color: #80CED7;
 }
 
-.btn-login:hover {
+.btn-main:hover {
   background-color: white;
   border-color: #80CED7;
   color: #80CED7;
+  text-decoration: none;
+}
+
+.btn-cancel {
+  width: 100%;
+  display: flex;
+  justify-content: center;  
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  border: 1px solid rgb(176, 174, 174);
+  border-radius: 6px;
+  color: rgb(176, 174, 174);
+  padding: 6px;
+}
+
+.btn-cancel:hover {
+  background-color: rgb(176, 174, 174);
+  border-color: rgb(176, 174, 174);
+  color: white;
+  text-decoration: none;
 }
 
 .form-wrapper {
@@ -245,8 +266,8 @@ select option[value=""] {
 }
 
 .error {
-    background-color: #d0021b;
-    border-color: #d0021b;
+    background-color: #D64045;
+    border-color: #D64045;
     border-radius: 6px;
     color: #fff;
     font-size: 14px;
@@ -256,17 +277,15 @@ select option[value=""] {
 }
 
 .card{
-  margin: 20px;
+  margin: 10px;
 }
 
 .card-bottom{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
-  padding: 0;
 }
 
 .card-footer a{
@@ -276,5 +295,25 @@ select option[value=""] {
 .btn-delete{
   border: none;
   cursor: pointer;
-
+  background-color: white;
+  font-size: 20px; 
+  color: rgb(128, 128, 128);
+  padding-top: 4px;
 }
+
+.search-bar{
+  margin-left: 60px;
+}
+
+.create-footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+
+
+
