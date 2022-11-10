@@ -22,8 +22,9 @@
 <hr>
 <ul>
     {{#if date}}
-    <li>applied on {{this.date}}</li>
+    <li>applied on {{formatDate this.date}}</li>
     {{/if}}
+
     {{#if workplace}}
     <li>{{this.workplace}} routine</li>
     {{/if}}

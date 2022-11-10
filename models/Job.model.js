@@ -11,7 +11,7 @@ const jobSchema = new Schema(
       require: true,  
     },
     description: String,      
-    date: Date,
+    date: String,
     location: String,
     workplace: String,
     status: String,
