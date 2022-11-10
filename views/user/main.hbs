@@ -18,11 +18,8 @@
 
 <h2 class="text-center">Application Tracker</h2>
 
-
-
 <hr>
 
-{{!-- <p>Option 1</p> --}}
 <div class="search-bar">
     <form action="/joblist" class="input-group input-group-lg" method="GET">
         <input type="text" class="form-login" style="width:250px;" name="filter" placeholder="Filter by anything..">
@@ -52,10 +49,10 @@
                     <p class="joblistContent"><span class=" btn btn-sm btn-secondary disabled rounded-4">{{status}}</span></p>
                 </div>
                 <div class="col">
-                    <div class="card-bottom" style="margin-top: 35px;">
-                        <a href="/details/{{_id}}"><span class="btn-delete bi-arrows-fullscreen shadow p-3 mb-5 bg-body rounded border border-secondary p-2 mb-2 border-opacity-10 text-primary"></span></a>
+                    <div class="card-bottom">
+                        <a class="btn-delete" href="/details/{{_id}}"><span class="bi-plus-square" style="font-size: 30px; color:#80CED7"></span></a>
                         <form action="/delete/{{_id}}" method="post">
-                            <button class="btn-delete" type="submit"><span class="bi-trash shadow p-3 mb-5 bg-body rounded border border-secondary text-danger text-opacity-25"></span></button>
+                            <button class="btn-delete" type="submit"><span class="bi-trash" style="font-size: 30px; color: rgb(173, 172, 172)"></span></button>
                         </form>
                     </div>
                 </div>
