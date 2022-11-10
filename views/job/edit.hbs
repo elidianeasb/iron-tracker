@@ -13,6 +13,23 @@
     </div>
 
     <div class="form-group">
+        <label for="status"></label>
+        <select class="form-control" name="status" id="status">
+            <option value="{{status}}" class="disabled-selected" disabled selected>{{status}}</option>
+            <option value="" class="disabled-selected" disabled>Select the Status</option>
+            <option value="Applied">Applied</option>
+            <option value="Phone Interview">Phone Interview</option>
+            <option value="Technical Interview">Technical Interview</option>
+            <option value="HR Interview">HR Interview</option>
+            <option value="Team Interview">Team Interview</option>
+            <option value="Offer Accepted">Offer Accepted</option>
+            <option value="Offer Rejected">Offer Rejected</option>
+            <option value="No Reply">No Reply</option>
+            <option value="Denied">Denied</option>
+        </select>
+    </div>
+
+    <div class="form-group">
         <label for="date"></label>
         <input type="date" data-date="" data-date-format="DD MMMM YYYY" name="date" class="form-control" autocomplete="{{date}}" id="date" placeholder="{{date}}" value='{{date}}'>
     </div>
@@ -56,18 +73,7 @@
 
 
 
-    <div class="form-group">
-        <label for="status"></label>
-        <select class="form-control" name="status" id="status">
-            <option value="{{status}}" class="disabled-selected" disabled selected>{{status}}</option>
-            <option value="" class="disabled-selected" disabled>Select the Status</option>
-{{!--       <option value="{{workplace}}" class="disabled-selected" disabled selected>{{workplace}}</option>
-            <option value="">Select the workplace</option> --}}
-            <option value="Applied">Applied</option>
-            <option value="Phase 2">Phase 2</option>
-            <option value="Phase 3">Phase 3</option>
-        </select>
-    </div>
+
 
     <div class="form-group">
         <label for="notes"></label>
