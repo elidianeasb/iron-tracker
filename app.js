@@ -14,9 +14,15 @@ const express = require("express");
 const hbs = require("hbs");
 
 const app = express();
-
+const moment = require('moment');
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
 require("./config")(app);
+
+hbs.registerHelper('formatDate', function(dateString) {
+    return new hbs.SafeString(
+        moment(dateString).format("D/MM/Y").toUpperCase()
+    );
+});
 
 const capitalize = require("./utils/capitalize");
 const projectName = "Project_2";

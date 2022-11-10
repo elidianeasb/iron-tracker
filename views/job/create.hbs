@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/"><h1>JOB TRACKER</h1></a>
+  <a class="navbar-brand" href="/"><h1>IRON TRACKER</h1></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -12,7 +12,7 @@
   </div>
 </nav>
 
-<h1>New Job Application</h1>
+<h3>New Job Application</h3>
 
 
 
@@ -21,17 +21,33 @@
 
     <div class="form-group">
         <label for="title"></label>
-        <input type="text" name="title" class="form-control" id="title" placeholder="Job Title">
+        <input type="text" name="title" class="form-control" id="title" placeholder="Job Title" required>
     </div>
 
     <div class="form-group">
         <label for="company"></label>
-        <input type="text" name="company" class="form-control" id="company" placeholder="Company">
+        <input type="text" name="company" class="form-control" id="company" placeholder="Company" required>
+    </div>
+
+    <div class="form-group">
+        <label for="status"></label>
+        <select class="form-control" name="status" id="status" required>
+            <option value="" class="disabled-selected" disabled selected>select the status</option>
+            <option value="Applied">Applied</option>
+            <option value="Phone Interview">Phone Interview</option>
+            <option value="Technical Interview">Technical Interview</option>
+            <option value="HR Interview">HR Interview</option>
+            <option value="Team Interview">Team Interview</option>
+            <option value="Offer Accepted">Offer Accepted</option>
+            <option value="Offer Rejected">Offer Rejected</option>
+            <option value="No Reply">No Reply</option>
+            <option value="Denied">Denied</option>
+        </select>
     </div>
 
     <div class="form-group">
         <label for="date"></label>
-        <input type="date" name="date" class="form-control" id="date" >
+        <input type="date" name="date" class="form-control" id="date">
     </div>
 
     <div class="form-group">
@@ -67,19 +83,7 @@
 
     <div class="form-group">
         <label for="contact"></label>
-        <input type="text" name="contact" class="form-control" id="contact" placeholder="Contact info">
-    </div>
-
-
-
-    <div class="form-group">
-        <label for="status"></label>
-        <select class="form-control" name="status" id="status">
-            <option value="" class="disabled-selected" disabled selected>select the status</option>
-            <option value="Applied">Applied</option>
-            <option value="Phase 2">Phase 2</option>
-            <option value="Phase 3">Phase 3</option>
-        </select>
+        <input type="text" name="contact" class="form-control" id="contact" placeholder="Contact person">
     </div>
 
     <div class="form-group">
@@ -90,10 +94,8 @@
 
     <div class="create-footer">
         <button type="submit" class="btn-main" style="width:150px;">Create</button>
-    <a class="btn-cancel" style="width:150px;" href="/joblist">Cancel</a>
-
+        <a class="btn-cancel" style="width:150px;" href="/joblist">Cancel</a>
     </div>
-    
 
 </form>
 
