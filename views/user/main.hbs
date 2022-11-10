@@ -18,24 +18,26 @@
 
 <h2 class="text-center">Application Tracker</h2>
 
-<hr>
 
+
+<hr>
 
 {{!-- <p>Option 1</p> --}}
 <div class="search-bar">
     <form action="/joblist" class="input-group input-group-lg" method="GET">
-        <input type="text" class="form-login" style="width:250px;" name="filter" placeholder="Title, Company, Status..">
-        <button type="submit" class="btn-main" style="width:60px; height: 35px;">Search</button>
+        <input type="text" class="form-login" style="width:250px;" name="filter" placeholder="Filter by anything..">
+        <button type="submit" class="btn-main" style="width:60px; height: 35px; padding: 0px; margin: 0px">Filter</button>
     </form>
 </div>
 
 <hr>
 
+<p class="text-center"><a class="btn-main" style="width:150px" href="/create">Create new Job</a></p>
 
 <div class="container align-cards">
     <div class="row">
         {{#each jobs}}
-        <div class="card" style="width: 22rem; background-color: rgb(253, 253, 253)">
+        <div class="card shadow-sm p-3 mb-5" style="width: 22rem; background-color: rgb(253, 253, 253); margin-left: 20px">
             <div class="card-body">
                 <div class="col ">
                     <p class="joblistHeader">Title:</p>
@@ -47,13 +49,13 @@
                 </div>
                 <div class="col">
                     <p class="joblistHeader">Status:</p>
-                    <p class="joblistContent">{{status}}</p>
+                    <p class="joblistContent"><span class=" btn btn-sm btn-secondary disabled rounded-4">{{status}}</span></p>
                 </div>
                 <div class="col">
-                    <div class="card-bottom">
-                        <a href="/details/{{_id}}"><span>More</span></a>
+                    <div class="card-bottom" style="margin-top: 35px;">
+                        <a href="/details/{{_id}}"><span class="btn-delete bi-arrows-fullscreen shadow p-3 mb-5 bg-body rounded border border-secondary p-2 mb-2 border-opacity-10 text-primary"></span></a>
                         <form action="/delete/{{_id}}" method="post">
-                            <button class="btn-delete" type="submit"><span class="bi-trash"></span></button>
+                            <button class="btn-delete" type="submit"><span class="bi-trash shadow p-3 mb-5 bg-body rounded border border-secondary text-danger text-opacity-25"></span></button>
                         </form>
                     </div>
                 </div>
@@ -62,7 +64,9 @@
         {{/each}}
     </div>
 </div>
-<p class="text-center"><a class="btn-main" style="width:150px;" href="/create">Create new Job</a></p>
+<p class="text-center"><a class="btn-main" style="width:150px" href="/create">Create new Job</a></p>
+
+
 
 
                
