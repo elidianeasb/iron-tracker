@@ -250,8 +250,6 @@ select option[value=""] {
   }
 }
 
-
-
 .login-footer{
   display: flex;
   margin-top: 10px;
@@ -302,7 +300,7 @@ select option[value=""] {
 }
 
 .search-bar{
-  margin-left: 60px;
+  margin-left: 35px;
 }
 
 .create-footer{
@@ -310,7 +308,6 @@ select option[value=""] {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
 
 
