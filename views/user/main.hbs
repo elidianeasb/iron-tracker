@@ -29,8 +29,7 @@
 
 <hr>
 
-<p class="text-center"><a class="btn-main" style="width:150px" href="/create">Create new Job</a></p>
-
+<p class="text-center"><a class="btn-main" style="width:150px" href="/create">Create new job</a></p>
 <div class="container align-cards">
     <div class="row">
         {{#each jobs}}
@@ -61,11 +60,10 @@
         {{/each}}
     </div>
 </div>
-<p class="text-center"><a class="btn-main" style="width:150px" href="/create">Create new Job</a></p>
+<p class="text-center">
 
-
-
-
+<a id="back-to-top" href="#" class="btn-main" style="width:150px" role="button">Back to top</a>
+</p>
                
 
 
@@ -85,29 +83,3 @@
 
 
 
-{{!-- {{#each jobs}}
-
-<div class="row align-items-start">
-    <div class="col">
-        <p class="joblistHeader">Title</p>
-        <p class="joblistContent">{{title}}</p>
-    </div>
-    <div class="col">
-        <p class="joblistHeader">Company</p>
-        <p class="joblistContent">{{company}}</p>
-    </div>
-    <div class="col">
-        <p class="joblistHeader">Status</p>
-        <p class="joblistContent">{{status}}</p>
-    </div>
-    <div class="col">
-        <a class="btn btn-primary btn-sm active" href="/details/{{_id}}"><span>🔍︎</span></a>
-        <form action="/delete/{{_id}}" method="post">
-            <button class="btn btn-danger btn-sm active" type="submit">🗙</button>
-        </form>
-    </div>
-</div>
-<hr>
-{{/each}} --}}
-
-{{!-- <p class="text-center"><a class="btn btn-success btn-sm active" href="/create">Create new Listing</a></p> --}}
